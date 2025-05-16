@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> upcoming </title>
+  <link rel="stylesheet" href="rr.css">
+
+</head>
+<body>
+
+<h1 class="title">UPCOMING</h1>
+<div class="slider" x-data="{start: true, end: false}">
+  <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+    <div class="slider__item">
+      <img class="slider__image" src="https://m.media-amazon.com/images/M/MV5BODMzNzhkMzUtZDRkMy00MzVjLWJmYzgtZjBhZTJhY2I4M2Y1XkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_FMjpg_UX1000_.jpg" alt="Image">
+      <div class="slider__info">
+        <h2>JAILER</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://th-i.thgim.com/public/entertainment/movies/edubzn/article66467044.ece/alternates/FREE_1200/Leo%20thalapathy%2067.jpg" alt="Image">
+      <div class="slider__info">
+        <h2>LEO</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://m.media-amazon.com/images/M/MV5BNzU3YmY5ZjAtMTIxYy00ODg2LWI0YzItMTVhNGM4YWIzNmYyXkEyXkFqcGdeQXVyMTQ4MTg3Njcx._V1_FMjpg_UX1000_.jpg" alt="Image">
+      <div class="slider__info">
+        <h2>MAAVEERAN</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://pbs.twimg.com/media/Fu_FTkaXsAM3o1i.jpg:large" alt="Image">
+      <div class="slider__info">
+        <h2>VIDAMUYARCHI</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://upload.wikimedia.org/wikipedia/en/7/7d/King-of-Kotha.jpg" alt="Image">
+      <div class="slider__info">
+        <h2>KING OF KOTHA</h2>
+      </div>
+    </div>
+   
+    <div class="slider__item">
+      <img class="slider__image" src="https://assets.gadgets360cdn.com/pricee/assets/product/202302/Bharateeyudu-2_1675424809.jpg" alt="Image">
+      <div class="slider__info">
+        <h2>INDIAN 2</h2>
+      </div>
+    </div>
+  
+   
+    <div class="slider__item">
+      <img class="slider__image" src="https://pbs.twimg.com/media/FvxGe1gXgAEAy-n.jpg:large" alt="Image">
+      <div class="slider__info">
+        <h2>CAPTAIN MILLER</h2>
+      </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTFCumqCVMfau0D5190VoNjQnaibQoc-ksyHQhYA5uiboLYCglm" alt="Image">
+        <div class="slider__info">
+          <h2>LOKI SEASON 2</h2>
+        </div>
+      </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRi33KsWCbgAedErNYmXCaO785Psjjeq1tnn1epi77mzlH8ziVS" alt="Image">
+      <div class="slider__info">
+        <h2>AVENGERS THE kANG DYNASTY</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSt-ZkyfY_d0HcefSnABTQ5Rf4MHe67eGSEy8gn8eZEJYo7ikea" alt="Image">
+      <div class="slider__info">
+        <h2>THUNDERBOLTS</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT6-AnlYmFBgCnlTSIk4eH3dD6BtNXMsrAASGjwqJNdfb-FO6Hc" alt="Image">
+      <div class="slider__info">
+        <h2>THE MARVEL</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbfF1Z1F9e62TDwaRJ2AuHLdSudEz2mKDa4SGlBPLddwBOp9oT" alt="Image">
+      <div class="slider__info">
+        <h2>THE OUT-LAWS</h2>
+      </div>
+    </div>
+  </div>
+  <div class="slider__nav">
+    <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+    <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+  </div>
+</div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
