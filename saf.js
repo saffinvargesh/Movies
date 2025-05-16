@@ -148,44 +148,10 @@ function successModal(movieNameIn, totalPrice, successTrue) {
 
   // Modal Center
 
-  const modalCenter = document.createElement("div");
-  const modalHeading = document.createElement("h1");
-  modalCenter.classList.add("modalCenter");
-  modalHeading.innerHTML = `Ticked Booked Successfully`;
-  modalCenter.appendChild(modalHeading);
-  const modalPara = document.createElement("p");
-  modalCenter.appendChild(modalPara);
-  modalPara.innerHTML = `IN ${movieNameIn} `;
-  successModal.appendChild(modalCenter);
+  
 
 
 
-  const modalBottom = document.createElement("div");
-  modalBottom.classList.add("modalBottom");
-  const successBtn = document.createElement("button");
-
-  successBtn.innerHTML = `Ok Got It!`;
-  modalBottom.appendChild(successBtn);
-  successModal.appendChild(modalBottom);
-
-  successBtn.addEventListener("click", (e) => {
-    removeModal();
-  });
-
-  window.addEventListener("click", (e) => {
-    if (e.target.classList.contains("overlay")) {
-      removeModal();
-    }
-  });
-
-  function removeModal() {
-    overlay.remove();
-    successModal.remove();
-    bodyEl.classList.remove("modal-active");
-    cancelSeats();
-  }
-
-  sectionEl.appendChild(successModal);
 }
 
 proceedBtnEl.addEventListener("click", (e) => {
